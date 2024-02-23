@@ -1,0 +1,42 @@
+.checkout {
+  width: 1200px;
+}
+h4 {
+    margin-top: 1%;
+  margin-left: 150px;
+}
+.msg-p{
+  color: green;
+  margin-left: 150px;
+
+}
+.invalidInput{
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+p {
+  margin-left: 250px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.data{
+    margin-top: 3%;
+}
+.bill-data{
+    margin-top: 7%;
+}
+.common-from {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-left: 250px;
+}
+button:disabled{
+  cursor: not-allowed;
+}
+
+
+

@@ -1,0 +1,32 @@
+.user-auth{
+  text-align: center;
+  margin-left: 150px;
+}
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: brown;
+  font-size: 20px;
+}
+h6{
+  margin-top: 10px;
+}
+h6.error-msg{
+  color: rgb(241, 26, 26);
+  margin-bottom: 10px;
+}
+.user-auth a{
+  cursor: pointer;
+  text-decoration: none;
+}
+button:disabled{
+  cursor: not-allowed;
+}

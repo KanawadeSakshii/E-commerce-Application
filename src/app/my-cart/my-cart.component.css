@@ -1,0 +1,59 @@
+.cart-page{
+    /* margin: 3px 3px; */
+    width: 1240px;
+    margin-left: 0%;
+}
+.cart-page h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+    background-color: rgb(247, 241, 220);
+}
+.details ul{
+    width: 830px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    padding-top: 5px;
+    background-color:rgb(247, 247, 240);
+    /* border-bottom: 1px solid gray; */
+    border-top: 1px solid gray;
+
+}
+
+.details img{
+    height: 150px;
+    width: 150px;
+}
+/* .summery{
+width: 350px;
+margin-left: 0%;
+} */
+.summery ul{
+    list-style-type: none;
+    background-color: rgb(238, 247, 244);
+    border: 1px solid gainsboro;
+    padding: 4%;
+}
+.summery ul li{
+    display: flex;
+    justify-content:space-between;
+}
+.form-buttons{
+    width: 150px;
+    height: 30px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+.form-buttons:hover{
+    color: aliceblue;
+    background-color: black;
+}

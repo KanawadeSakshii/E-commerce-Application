@@ -1,0 +1,38 @@
+.produst-list {
+  text-align: center;
+}
+h2 {
+  margin-top: 1%;
+  font-variant: small-caps;
+  color: rgb(2, 33, 67);
+  margin-left: 200px;
+}
+table {
+  text-align: center;
+  color: rgb(1, 22, 15);
+  border-collapse: collapse;
+  margin-left: 200px;
+  font-family: "Times New Roman", Times, serif;
+}
+table td,
+table th {
+  border: 1px solid rgb(2, 53, 109);
+  padding: 10px;
+}
+table th {
+  color: rgb(3, 60, 121);
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+p {
+  color: green;
+}
+.ison {
+  color: rgb(244, 10, 10);
+  font-size: x-large;
+}
+.edit {
+  margin-left: 25px;
+}

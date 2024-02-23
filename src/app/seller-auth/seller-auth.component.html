@@ -1,0 +1,41 @@
+<div class="seller-auth">
+    <!-- displayed only if showLogin is false . -->
+    <div *ngIf="!showLogin" class="sign-up">
+        <h1>Seller sign-up page</h1>
+        <form class="form-signup" #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" >
+            <input class="form-input" name="name" type="text" placeholder="    Enter Username" ngModel #name="ngModel"
+                required name>
+            <p class="invalidInput"><span *ngIf="name.invalid && name.touched">Please Enter Name</span> </p>
+            <input class="form-input" name="password" type="password" placeholder="    Enter password" ngModel
+                #password="ngModel" required minlength="6" maxlength="20">
+            <p class="invalidInput"><span *ngIf="password.invalid && password.touched">Please Enter Password Minimum 6
+                    lenght</span> </p>
+            <input class="form-input" name="email" type="email" placeholder="    Enter email" ngModel #email="ngModel"
+                required email>
+            <p class="invalidInput"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span> </p>
+            <button [disabled]="sellerSignUp.invalid" class="form-button">Sign-up</button>
+            <h6> Already Have Account ?<a class="flip" (click)="openLogin()"> Click to login</a></h6>
+        </form>
+    </div>
+
+    <!-- Login Page -->
+    <!-- displayed only if showLogin is true. -->
+    <div *ngIf="showLogin" class="login">
+        <h1>Seller Login</h1>
+        <p>{{errorMsg}}</p>
+        <form #sellerLogin="ngForm" (ngSubmit)="Login(sellerLogin.value)" class="form-signup">
+
+            <input class="form-input" type="email" placeholder="  Enter User email" name="email" ngModel
+                #email="ngModel" required email>
+            <p class="invalidInput"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span> </p>
+
+            <input class="form-input" name="password" ngModel type="password" placeholder="    Enter password"
+            minlength="6" maxlength="10" #password="ngModel" required >
+            <p class="invalidInput"><span *ngIf="password.invalid && password.touched">Please Enter Password Minimum 6
+                    lenght</span> </p>
+
+            <button [disabled]="sellerLogin.invalid" class="form-button">Login</button>
+            <h6>Don't Have Account ? <a class="flip" (click)="openSignUp()"> Click to sign-up</a></h6>
+        </form>
+    </div>
+</div>

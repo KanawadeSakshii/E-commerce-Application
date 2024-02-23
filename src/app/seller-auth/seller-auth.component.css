@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: brown;
+  font-size: 20px;
+}
+.seller-auth{
+  margin-left: 150px;
+}
+button:disabled{
+  cursor: not-allowed;
+}
+.flip {
+  margin-top: 15px;
+  color: blueviolet;
+  cursor: pointer;
+  text-decoration: none;
+}
+p {
+  text-align: center;
+  color: red;
+  margin-bottom: 20px;
+  width: 299px;
+  text-align: center;
+}
+h6{
+    margin-top: 2%;
+}

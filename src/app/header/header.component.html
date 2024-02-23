@@ -1,0 +1,48 @@
+<nav class="nav">
+    <div class="loader">
+        <h1><a routerLink="/">Klothik</a></h1>
+    </div>
+    <div *ngIf="menuType!=='seller'" class="nav-search">
+        <i class="fa-regular fa-magnifying-glass"></i>
+        <input type="text" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()"
+            placeholder="  Search for Product">
+        <button (click)="submitSearch(searchInput.value)">Search</button>
+        <ul class="suggested-Result" *ngIf="searchResult">
+            <li *ngFor="let item of searchResult">
+                <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="page-header-secondary-msg">
+        <ul class="social-icon">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+
+    <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'" class="comp">
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="seller-auth">Seller</a></li>
+            <li><a routerLink="user-auth">Login/Sign-up</a></li>
+            <li><a href="#">Cart({{cartItems}})</a></li>
+        </ul>
+
+        <ul *ngSwitchCase="'user'" class="comp">
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="my-orders">My Orders</a></li>
+            <li><a [routerLink]="cartItems>0?'my-cart':null">Cart({{cartItems}})</a></li>
+            <button (click)="userLogout()" class="logout">Logout</button>
+            <li><a>{{userName | titlecase}}</a></li>
+        </ul>
+
+        <ul *ngSwitchCase="'seller'" class="comp">
+            <li><a routerLink="seller-home">List</a></li>
+            <li><a routerLink="seller-add-products">Add Product</a></li>
+            <button (click)="logout()" class="logout">Logout</button>
+            <li><a>{{sellerName | titlecase}}</a></li><!--titlecase for 1st letter uppercase -->
+        </ul>
+    </div>
+</nav>

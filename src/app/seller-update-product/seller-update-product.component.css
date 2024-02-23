@@ -1,0 +1,31 @@
+.product-form{
+    text-align: center;
+    color: rgb(1, 78, 52);
+    font-variant: small-caps;
+    margin-left: 150px;
+    margin-top: 1%;
+
+}
+p{
+    color: green;
+    font-size: medium;
+    font-variant:normal
+    
+}
+.form-product{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+}
+.form-input{
+ height: 30px;
+margin-bottom: 15px;
+border: none;
+background-color: rgb(245, 223, 242);
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: rgb(1, 11, 11);
+font-size: 15px;
+}
+
